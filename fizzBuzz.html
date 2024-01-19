@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="fizzBuzz.css">
+</head>
+<body class="col-7 mx-auto">       
+    <div class="bubbles">
+        <span class="one"></span>
+        <span class="two"></span>
+        <span class="three"></span>
+        <span class="four"></span>
+        <span class="five"></span>
+        <span class="six"></span>
+        <span class="seven"></span>
+        <span class="seven"></span>
+      </div>
+      <div class="bubbles">
+        <span class="one"></span>
+        <span class="two"></span>
+        <span class="three"></span>
+        <span class="four"></span>
+        <span class="five"></span>
+        <span class="six"></span>
+        <span class="seven"></span>
+        <span class="seven"></span>
+      </div>
+      <div class="bubbles">
+        <span class="one"></span>
+        <span class="two"></span>
+        <span class="three"></span>
+        <span class="four"></span>
+        <span class="five"></span>
+        <span class="six"></span>
+        <span class="seven"></span>
+        <span class="seven"></span>
+      </div>
+      <div class="bubbles">
+        <span class="one"></span>
+        <span class="two"></span>
+        <span class="three"></span>
+        <span class="four"></span>
+        <span class="five"></span>
+        <span class="six"></span>
+        <span class="seven"></span>
+        <span class="seven"></span>
+      </div>                                                        
+      <div class="bubbles">
+        <span class="one"></span>
+        <span class="two"></span>
+        <span class="three"></span>
+        <span class="four"></span>
+        <span class="five"></span>
+        <span class="six"></span>
+        <span class="seven"></span>
+        <span class="seven"></span>
+      </div>                                                        
+    <div class="form-group my-5 mt-5 py-5 card-body shadow-md p-4  mb-0">
+     <input type="number" class="form-control py-3 mx-auto mb-3" placeholder="Enter a number" id="numOfUser">
+        <button class="btn btn-success w-100" onclick="checkScore()">Check</button>
+    </div>
+    <button onclick="playMusic()" disabled></button>
+    <script>
+         var songd = new Audio ("Audio/dunsin.mp3")
+    function playMusic () {
+        
+    }
+    var songm = new Audio ("Audio/Miss.mp3")
+    function playMusic () {
+        
+    }
+        
+    //       var numberInput = Number(prompt ("Enter a number"))
+    //     var answer = numberInput
+    //     if (answer % 3 == 0 && answer % 5 == 0 ) {
+    //        console.log("Buzz");
+           
+    //    }
+    //    else if ( answer % 3 == 0 || answer % 5 ==0 ) {
+    //         console.log("Fizz")}
+    //    else if ( answer % 3 != 0 || answer % 5 !==0 ) {
+    //         console.log("Syntax error")}
+
+         function checkScore() {
+            // let numCal = numOfUser.value / 3
+            // prompt(numcal) 
+            // alert("I am working")
+            // alert(scoreOfUser.value)
+            let paragraph1= document.getElementById("screen2")
+            if (numOfUser.value == "") {
+                paragraph1.innerHTML="Space cannot be blank";
+                numOfUser.value = ""
+            }
+           else if (numOfUser.value == 0 || numOfUser.value == 0) {
+                paragraph1.innerHTML="Syntax Error";
+                numOfUser.value = ""
+            }
+           else if (numOfUser.value % 3 == 0 && numOfUser.value % 5 == 0) {
+                paragraph1.innerHTML="Fizz Buzz";
+                numOfUser.value = ""
+            }
+           else if (numOfUser.value % 3 ==0 ) {
+                paragraph1.innerHTML="Fizz";
+                numOfUser.value = ""
+            }
+           else if ( numOfUser.value % 5 ==0) {
+                paragraph1.innerHTML="Buzz";
+                numOfUser.value = ""
+            }
+           else if(numOfUser.value % 3 != 0 || numOfUser.value !==0 ) {
+                paragraph1.innerHTML="Answer not avalaible";
+                numOfUser.value = ""
+            }
+   
+            
+         }
+    </script>
+    <p class="form-group my-5 mt-5 py-5 card-body shadow-sm p-0 mb-0 h1" id="screen2" style="text-align: center; color: rgb(238, 16, 227);">Check</p>
+    <marquee behavior="roll" direction="right"> <span class="h3" style="color:pink ;"> Welcome to Davelogics official Fizz Buzz page</span></marquee>
+</body>
+</html>
